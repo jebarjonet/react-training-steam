@@ -1,6 +1,6 @@
 # React training : Steam
 
-Quick training to get me into React again using **React 15.1**, **Webpack** (with hot reload module) and **NodeJS + Express** which is simply serving the html index.
+Quick training to get me into React again using **React 15.1**, **Webpack** (with hot reload module) and **NodeJS + Express** which is serving the html index and a query url retrieving data from Steam API.
 
 You need **Nodemon** (`npm i -g nodemon`)
 
