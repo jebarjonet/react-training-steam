@@ -1,0 +1,135 @@
+@import url(https://fonts.googleapis.com/css?family=Arvo);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans0);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: #f2f3f5;
+    color: #242424;
+
+    a {
+        text-decoration: none !important;
+    }
+}
+
+.logo {
+    height: 160px;
+    margin: 60px auto;
+    display: block;
+}
+
+.introduction {
+    display: block;
+    margin: 30px auto;
+    text-align: center;
+    font-size: 16px;
+}
+
+.feed {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    padding: 12px;
+    max-width: 1000px;
+    margin: auto;
+
+    .item {
+        @item-width: 460px;
+
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        width: @item-width;
+        background-color: #fff;
+        border-radius: 6px;
+        overflow: hidden;
+        margin: 16px;
+        color: #2c2c2c;
+
+        &__discount {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+
+            font-size: 10px;
+            color: #fff;
+            border-radius: 2px;
+            padding: 3px 5px;
+            background-color: #fd674a;
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            padding: 20px;
+            font-family: "Montserrat", sans-serif;
+
+            & > * {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+
+                & > *:not(:last-child) {
+                    margin-bottom: 14px;
+                }
+            }
+
+            &__left {
+                margin-right: 16px;
+
+                &__title {
+                    font-family: "Arvo", sans-serif;
+                    font-size: 18px;
+                }
+
+                &__supports {
+                    display: flex;
+                    flex-direction: row;
+                    color: #eaeaea;
+
+                    & > * {
+                        margin-right: 4px;
+
+                        &.fa--active {
+                            color: #8f75be;
+                        }
+                    }
+                }
+            }
+
+            &__right {
+                text-align: right;
+
+                &__previous_price {
+                    text-decoration: line-through;
+                    color: #9fa3a7;
+                    padding-right: 12px;
+                }
+
+                &__button {
+                    display: inline-block;
+                    padding: 8px 18px;
+
+                    white-space: nowrap;
+                    font-size: 13px;
+                    letter-spacing: 2px;
+                    border: 2px solid #ffc80a;
+                    background-color: transparent;
+                    border-radius: 20px;
+                    text-transform: uppercase;
+                    color: #4e4e4e;
+                    transition: background-color .1s linear;
+
+                    &:hover {
+                        background-color: #ffc80a;
+                    }
+                }
+            }
+        }
+    }
+}
